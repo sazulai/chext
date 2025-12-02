@@ -1,0 +1,9 @@
+{
+  "name": "com.chext.logger",
+  "description": "Chext element logger native host",
+  "path": "/home/sharon/dev/chext/native-host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://lalniejjnbmnhmlnjfkkmfjcebigepil/"
+  ]
+}
