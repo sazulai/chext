@@ -59,6 +59,10 @@ function getDomain(url) {
 
 // Render all items
 function renderItems() {
+  // Remove all content items (but keep emptyState)
+  const items = contentList.querySelectorAll('.content-item');
+  items.forEach(item => item.remove());
+
   if (capturedItems.length === 0) {
     emptyState.style.display = 'flex';
     itemCount.textContent = '0 items captured';
@@ -66,7 +70,6 @@ function renderItems() {
   }
 
   emptyState.style.display = 'none';
-  contentList.innerHTML = '';
 
   // Render items in reverse order (newest first)
   for (let i = capturedItems.length - 1; i >= 0; i--) {
